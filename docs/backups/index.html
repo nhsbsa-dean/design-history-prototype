@@ -1,0 +1,76 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Design history - NHSBSA
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <!-- Change the page title here -->
+    <h1>
+      Design History
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">NHS Business Services Authority</span>
+    </h1>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    <p class="nhsuk-lede-text">
+      Document and share design decisions. Create a permanent record of how your service has developed over time.
+    </p>
+
+    <hr>
+
+    <h2>
+      What is a design history
+    </h2>
+
+    <p>When designing and building a service, it can be easy to forget why previous decisions were made, even more so as
+      new people join the team and others leave. A design history can help by creating a permanent record.</p>
+
+    <p>A design history site is like a blog, with posts describing the development of new features, iterations of
+      existing ones or findings from user research – anything that may be useful to return to later.</p>
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Key points of the design history",
+        "HTML": "
+        <p>Having the design history means you could:</p>
+        <ul>
+          <li>re-evaluate decisions</li>
+          <li>see how a feature changed over time</li>
+          <li>see how things tested in research</li>
+          <li>give context to new team members</li>
+          <li>demonstrate reasons why certain features did not work</li>
+          <li>create snapshots of how things looked at significant milestones</li>
+          <li>share design decisions across government</li>
+          <li>share everything with service assessors</li>
+        </ul>"
+      }) }}
+
+    <a href="./search/search-a-service" class="nhsuk-button">Search a service</a>
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,117 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Overall Service name - Design history - NHSBSA
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <h1>Create a new blog</h1>
+
+        <form action="create-blog" method="POST">
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="title">
+                    Title of Blog
+                </label>
+                <input class="nhsuk-input" id="title" name="title" type="text">
+            </div>
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="desc">
+                    Description
+                </label>
+                <div class="nhsuk-hint" id="desc-hint">
+                    Provide a description for the blog
+                </div>
+                <textarea class="nhsuk-textarea" id="desc" name="description" rows="5"
+                    aria-describedby="desc-hint"></textarea>
+            </div>
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="md">
+                    Markdown content
+                </label>
+                <div class="nhsuk-hint" id="md-hint">
+                    Blog content, this is written in markdown.
+                </div>
+                <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                        <span class="nhsuk-details__summary-text">
+                            What is markdown and how to write it
+                        </span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+                        <h2 class="nhsuk-heading-s">What is markdown</h2>
+                        <h2 class="nhsuk-heading-s">How to write markdown</h2>
+                    </div>
+                </details>
+                <textarea class="nhsuk-textarea" id="md" name="markdown" rows="5" aria-mdribedby="md-hint"></textarea>
+            </div>
+
+            <h2 class="nhsuk-heading-l">
+                Which service is this blog for?
+            </h2>
+
+            <div class="nhsuk-form-group">
+                <div class="nhsuk-radios">
+
+                    <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="service-one" name="service" type="radio" value="service name one">
+                        <label class="nhsuk-label nhsuk-radios__label" for="service-one">
+                            Service One
+                        </label>
+                    </div>
+
+                    <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="service-two" name="service" type="radio" value="service name two">
+                        <label class="nhsuk-label nhsuk-radios__label" for="service-two">
+                            Service Two
+                        </label>
+                    </div>
+
+                    <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="service-three" name="service" type="radio" value="service name three">
+                        <label class="nhsuk-label nhsuk-radios__label" for="service-three">
+                            Service Three
+                        </label>
+                    </div>
+
+                    <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="service-four" name="service" type="radio" value="service name four">
+                        <label class="nhsuk-label nhsuk-radios__label" for="service-four">
+                            Service Four
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="nhsuk-form-group">
+                <button class="nhsuk-button" type="submit">Publish</button>
+            </div>
+
+        </form>
+
+
+    </div>
+</div>
+{% endblock %}

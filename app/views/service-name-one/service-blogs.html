@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h1 class="nhsuk-heading-xl">
+      Service name
+    </h1>
+    <p>A service for users to find something</p>
+
+    <h2 class="nhsuk-heading-l">Posts</h2>
+
+    <ul class="nhsuk-list">
+      {% for file in fileList %}
+      <li><a href="#">{{ file }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <div class="nhsuk-expander-group">
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Service name blog one",
+        "HTML": "
+        <p>Description on what the post will include</p>
+        <p>This post includes information on:</p>
+        <ul>
+        <li>info one</li>
+        <li>info two</li>
+        <li>info three</li>
+        <li>info four</li>
+        </ul>
+        "
+    }) }}
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

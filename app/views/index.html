@@ -4,6 +4,7 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
+
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -12,7 +13,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  Design history - NHSBSA
+Overall Service name - Design history - NHSBSA
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -22,57 +23,61 @@
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
 
-      <!-- Change the page title here -->
-      <h1>
-        Design History
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">NHS Business Services Authority</span>
-      </h1>
+    <!-- Change the page title here -->
+    <h1>
+      Overall Service Name
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Design History</span>
+    </h1>
+    <p class="nhsuk-lede-text nhsuk-u-margin-bottom-2">
+      Document and share design decisions. Create a permanent record of how this service has developed over time.
+    </p>
 
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+  </div>
 
-      <p class="nhsuk-lede-text">
-        Document and share design decisions. Create a permanent record of how your service has developed over time.
-      </p>
+  <div class="nhsuk-grid-column-full">
+    <hr>
+  </div>
 
-      <hr>
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-padding-bottom-3">
+    <h2 class="nhsuk-heading-l">Services</h2>
+    </div>
 
-      <h2>
-        About this page
-      </h2>
+    <div class="nhsuk-grid-column-one-half nhsuk-u-margin-bottom-3">
+      <h3><a href="./service-name-one/service-blogs">Service One</a></h3>
+      <p>A service for users to find something</p>
+    </div>
 
-      <p>
-        Use this page as the index for your project.
-      </p>
-      
-      <p>
-        You'll find the code for this page at <strong>/app/views/index.html</strong>.
-      </p>
+    <div class="nhsuk-grid-column-one-half nhsuk-u-margin-bottom-3">
+      <h3><a href="./service-name-two/service-blogs">Service Two</a></h3>
+      <p>A service for users to do something</p>
+    </div>
 
-      <p>
-        There is also an <a href="/page-example">example page</a>, which contains a selection of NHS.UK frontend styles and components.
-      </p>
+    <div class="nhsuk-grid-column-one-half nhsuk-u-margin-bottom-3">
+      <h3><a href="./service-name-three/service-blogs">Service Three</a></h3>
+      <p>A service for users to store something</p>
+    </div>
 
-      <hr>
-
-      <h2>
-        Documentation
-      </h2>
-
-      <ul>
-        <li>
-          Get started with <a href="/docs">how to guides and page templates</a>
-        </li>
-        <li>
-          Copy and paste styles and components from the <a href="https://service-manual.nhs.uk/design-system">NHS digital service manual</a>
-        </li>
-      </ul>
-
-      <!-- End of content -->
-
+    <div class="nhsuk-grid-column-one-half nhsuk-u-margin-bottom-3">
+      <h3><a href="./service-name-four/service-blogs">Service Four</a></h3>
+      <p>A service for users to locate something</p>
     </div>
   </div>
+
+  <div class="nhsuk-grid-column-full">
+    <hr>
+  </div>
+
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 class="nhsuk-heading-l">Create blog</h2>
+    <p>Here you can create a new blog post for a service</p>
+    <a href="create-blog/new" class="nhsuk-button">Create a blog</a>
+  </div>
+
+
+
+</div>
 {% endblock %}

@@ -1,0 +1,4 @@
+{ title: 'Another blog',
+  description: 'description here for the blog',
+  markdown: '##Here is the heading\r\n\r\nsome content\r\n\r\n##Here is the second heading\r\n\r\nsome more content',
+  service: 'service name two' }
